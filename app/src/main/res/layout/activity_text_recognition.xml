@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".TextRecognitionActivity">
 
     <SurfaceView
         android:id="@+id/svText"
@@ -14,6 +14,7 @@
     <TextView
         android:id="@+id/tvText"
         android:text="No Text"
+        android:gravity="center_horizontal"
         android:layout_alignParentBottom="true"
         android:textColor="#FFF"
         android:textSize="20sp"

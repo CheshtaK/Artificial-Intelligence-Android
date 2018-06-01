@@ -19,7 +19,7 @@ import com.google.android.gms.vision.text.TextRecognizer;
 
 import java.io.IOException;
 
-public class MainActivity extends AppCompatActivity {
+public class TextRecognitionActivity extends AppCompatActivity {
 
     SurfaceView svText;
     TextView tvText;
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_text_recognition);
 
         svText = findViewById(R.id.svText);
         tvText = findViewById(R.id.tvText);
@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void surfaceCreated(SurfaceHolder holder) {
                     try {
-                        if (ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                            ActivityCompat.requestPermissions(MainActivity.this,
+                        if (ActivityCompat.checkSelfPermission(TextRecognitionActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                            ActivityCompat.requestPermissions(TextRecognitionActivity.this,
                                     new String[]{Manifest.permission.CAMERA},
                                     RequestCameraPermissionID);
                             return;
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         switch (requestCode){
             case RequestCameraPermissionID:{
                 if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    if (ActivityCompat.checkSelfPermission(MainActivity.this,
+                    if (ActivityCompat.checkSelfPermission(TextRecognitionActivity.this,
                             Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
                         return;
                     }

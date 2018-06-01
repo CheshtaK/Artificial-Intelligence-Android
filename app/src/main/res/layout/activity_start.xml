@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+    <Button
+        android:id="@+id/btnTextRecognition"
+        android:text="TEXT RECOGNITION"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnFaceDetection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnTextRecognition"
+        android:text="FACE DETECTION"
+        android:textSize="20sp"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/btnFaceIdentification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnFaceDetection"
+        android:text="FACE IDENTIFICATION"
+        android:textSize="20sp"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/btnImageAnalyzing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnFaceIdentification"
+        android:text="ANALYZE IMAGE"
+        android:textSize="20sp"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>
