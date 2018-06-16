@@ -27,5 +27,13 @@ public class StartActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnFaceDetection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity.this, FaceDetectionActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
